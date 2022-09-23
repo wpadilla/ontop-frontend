@@ -9,6 +9,10 @@
   justify-items: center;
   align-items: center;
   white-space: nowrap;
+  position: relative;
+  .actions-wrapper {
+    display: relative;
+  }
   .contractor-item-profile {
     display: flex;
     align-items: center;

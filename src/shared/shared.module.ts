@@ -7,6 +7,7 @@ import { InputDirective } from "./directives/input.directive";
 import { TableComponent } from './components/table/table.component';
 import { ContractorItemComponent } from './components/contractor-item/contractor-item.component';
 import { BadgeComponent } from './components/badge/badge.component';
+import { ContextMenuComponent } from './components/context-menu/context-menu.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BadgeComponent } from './components/badge/badge.component';
     ButtonComponent,
     TableComponent,
     ContractorItemComponent,
-    BadgeComponent
+    BadgeComponent,
+    ContextMenuComponent
   ],
   imports: [
     CommonModule

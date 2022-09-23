@@ -8,7 +8,7 @@ import { IAvailableIcons } from "../../../core/interfaces/icons";
 })
 export class IconComponent implements OnInit, AfterViewInit {
   @Input() icon: IAvailableIcons = 'person';
-  @Input() class?: string;
+  @Input() iconClass?: string;
   rendered?: boolean;
   @ViewChild('customIcon') customIcon?: ElementRef<HTMLObjectElement>;
 

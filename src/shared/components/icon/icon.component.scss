@@ -1,4 +1,10 @@
 :host {
   position: relative;
   cursor: pointer;
+  z-index: 9;
+}
+
+object {
+  position: relative;
+  z-index: -1;
 }

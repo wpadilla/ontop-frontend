@@ -10,5 +10,10 @@
     [mode]="contractor.status === 'Active' ? 'success' : 'pending'"
     [text]="contractor.status">
   </app-badge>
-  <app-icon icon="options"></app-icon>
+  <div class="actions-wrapper">
+    <app-icon class="cursor-pointer" (click)="openContextMenu = !openContextMenu" icon="options"
+    ></app-icon>
+    <app-context-menu [open]="openContextMenu" [options]="contractorActions"></app-context-menu>
+  </div>
+
 </div>
