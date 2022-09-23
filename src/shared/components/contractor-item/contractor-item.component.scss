@@ -10,9 +10,11 @@
   align-items: center;
   white-space: nowrap;
   position: relative;
+
   .actions-wrapper {
     display: relative;
   }
+
   .contractor-item-profile {
     display: flex;
     align-items: center;
@@ -24,9 +26,53 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .contractor-item {
+    .actions-wrapper {
+      ::ng-deep {
+        object {
+          transform: rotate(90deg);
+          margin-left: 1.125rem;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .content {
-    padding: 3.75rem 2rem;
+  .contractor-item {
+    background-color: #fff;
+    padding: 0.625rem 0.9375rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0.3125rem;
+
+    .contractor-item-profile {
+      .contractor-item-profile-image {
+        display: none;
+      }
+    }
+
+    .contractor-item-value {
+      display: grid;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0.625rem 1.25rem;
+      grid-template-columns: repeat(auto-fit, minmax(6.25rem, 1fr));
+      font-size: 0.75rem;
+
+      &:nth-child(odd) {
+        background-color: $light-gray;
+      }
+
+      &::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: 700;
+      }
+    }
   }
 }
 

@@ -1,16 +1,17 @@
 <div class="contractor-item">
-  <div class="contractor-item-profile">
+  <div class="contractor-item-profile contractor-item-value" data-label="Contractor Name">
     <img class="contractor-item-profile-image" [src]="contractor.profileImg" alt=""/>
     <span>{{contractor.name}}</span>
   </div>
-  <span>{{contractor.type}}</span>
-  <span>{{contractor.startDate | date}}</span>
-  <span>{{contractor.amount | currency}} USD</span>
-  <app-badge
+  <span class="contractor-item-value"  data-label="Type">{{contractor.type}}</span>
+  <span class="contractor-item-value"  data-label="Start date">{{contractor.startDate | date}}</span>
+  <span class="contractor-item-value"  data-label="Amount">{{contractor.amount | currency}} USD</span>
+  <app-badge  data-label="Status"
+    class="contractor-item-value"
     [mode]="contractor.status === 'Active' ? 'success' : 'pending'"
     [text]="contractor.status">
   </app-badge>
-  <div class="actions-wrapper">
+  <div class="actions-wrapper contractor-item-value"  data-label="Actions">
     <app-icon class="cursor-pointer" (click)="toggleContextMenu()" icon="options"
     ></app-icon>
     <app-context-menu

@@ -20,3 +20,14 @@
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .table-wrapper {
+    box-shadow: unset;
+    background-color: transparent;
+    padding: 0;
+    .table-header {
+      display: none;
+    }
+
+  }
+}

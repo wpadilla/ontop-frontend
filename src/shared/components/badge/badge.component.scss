@@ -1,8 +1,12 @@
 @import "src/shared/styles/colors";
+:host {
+  justify-self: stretch;
+}
 
 .badge {
   padding: 5px 10px;
-  width: 162px;
+  max-width: 162px;
+  width: 100%;
   border-radius: 20px;
   font-size: 0.625rem;
   display: flex;

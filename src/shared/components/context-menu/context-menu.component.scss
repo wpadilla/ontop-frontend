@@ -1,5 +1,7 @@
 @import "src/shared/styles/colors";
-
+:host {
+  position: absolute;
+}
 .context-menu {
   padding: 5px 0.8125rem;
   background-color: white;
