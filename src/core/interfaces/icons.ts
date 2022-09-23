@@ -8,4 +8,5 @@ export type IAvailableIcons = 'arrow-down'| 'calendar'|
 'person'|
 'plus'|
 'sign'|
+'menu'|
 'trash';

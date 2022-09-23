@@ -34,7 +34,6 @@
       grid-template-columns: repeat(auto-fit, minmax(5.5rem, 1fr));
       align-items: center;
       gap: 1.75rem;
-      //flex-wrap: wrap;
 
       .column-2 {
         grid-column: span 2;
@@ -44,5 +43,20 @@
         grid-column: span 3;
       }
     }
+  }
+}
+
+@media screen and (max-width: 912px) {
+  .contracts-actions-filters {
+    .column-2,
+    .column-3 {
+      grid-column: 1 / -1 !important;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 3.75rem 2rem;
   }
 }

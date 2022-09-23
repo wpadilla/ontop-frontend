@@ -22,7 +22,5 @@ export class InputSearchDirective implements OnInit{
     `;
 
     this.element.nativeElement.setAttribute('style', css);
-
-
   }
 }
