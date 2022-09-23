@@ -1,0 +1,46 @@
+.content {
+  padding: 3.75rem 11.25rem;
+  .title {
+    margin-bottom: 3.125rem;
+    text-align: center;
+    size: 2rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+  }
+
+  .contracts-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+
+    .contracts-search-filter-wrapper {
+      display: flex;
+      align-items: stretch;
+      gap: 1.125rem;
+      height: 3.75rem;
+
+      .contracts-actions {
+        display: flex;
+        align-items: stretch;
+        gap: 1.125rem;
+      }
+    }
+
+    .contracts-actions-filters {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+      align-items: center;
+      gap: 1.75rem;
+      //flex-wrap: wrap;
+
+      .column-2 {
+        grid-column: span 2;
+      }
+      .column-3 {
+        grid-column: span 3;
+      }
+    }
+  }
+
+
+}

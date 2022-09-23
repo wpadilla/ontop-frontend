@@ -5,4 +5,52 @@ body {
   margin: 0;
   padding: 0;
   font-family: aileron;
+
+  input {
+    &::placeholder {
+      color: $dark-gray;
+    }
+  }
+}
+
+* {
+   box-sizing: border-box;
+}
+
+.input-icon-wrapper {
+  position: relative;
+
+  input {
+    padding: 10px 30px !important;
+    width: 100%;
+  }
+
+  object {
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+    &.left-icon {
+      left: 10px;
+
+    }
+    &.right-icon {
+      right: 10px;
+      width: 14px;
+      margin-top: -4px;
+
+    }
+  }
+
+  &.just-left-icon {
+    input {
+      padding: 15px 15px 15px 30px !important;
+    }
+  }
+
+  &.just-right-icon {
+    input {
+      padding: 15px 30px 15px 15px !important;
+    }
+  }
+
 }
