@@ -1,6 +1,5 @@
 import { NgModule } from "@angular/core";
 import { IconComponent } from "./components/icon/icon.component";
-import { InputSearchDirective } from './directives/input-search.directive';
 import { ButtonComponent } from './components/button/button.component';
 import { CommonModule } from "@angular/common";
 import { InputDirective } from "./directives/input.directive";
@@ -9,18 +8,19 @@ import { ContractorItemComponent } from './components/contractor-item/contractor
 import { BadgeComponent } from './components/badge/badge.component';
 import { ContextMenuComponent } from './components/context-menu/context-menu.component';
 import { ClickOutsideDirective } from "./directives/click-outside.directive";
+import { SearchBoxComponent } from './components/search-box/search-box.component';
 
 @NgModule({
   declarations: [
     IconComponent,
-    InputSearchDirective,
     ClickOutsideDirective,
     InputDirective,
     ButtonComponent,
     TableComponent,
     ContractorItemComponent,
     BadgeComponent,
-    ContextMenuComponent
+    ContextMenuComponent,
+    SearchBoxComponent
   ],
   imports: [
     CommonModule
@@ -28,12 +28,12 @@ import { ClickOutsideDirective } from "./directives/click-outside.directive";
   providers: [],
   exports: [
     IconComponent,
-    InputSearchDirective,
     ClickOutsideDirective,
     InputDirective,
     ButtonComponent,
     TableComponent,
-    ContractorItemComponent
+    ContractorItemComponent,
+    SearchBoxComponent
   ]
 })
 export class SharedModule { }

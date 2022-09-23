@@ -51,7 +51,47 @@
     .column-2,
     .column-3 {
       grid-column: 1 / -1 !important;
+      display: flex;
+      justify-content: center;
     }
+
+    input {
+      width: 100%;
+      max-width: 230px;
+    }
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .contracts-wrapper {
+    .contracts-search-filter-wrapper {
+      flex-wrap: wrap;
+      height: auto !important;
+      justify-content: center;
+    }
+
+    .contracts-actions {
+      width: 100%;
+
+      ::ng-deep {
+        app-button:first-of-type {
+          width: 70%;
+          button {
+            width: 100%;
+          }
+        }
+
+        app-button:last-of-type {
+          width: 130%;
+          button {
+            width: 100%;
+          }
+        }
+      }
+
+    }
+
+
   }
 }
 

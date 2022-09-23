@@ -3,7 +3,7 @@
   <h1 class="title">Contracts for Client</h1>
   <div class="contracts-wrapper">
     <div class="contracts-search-filter-wrapper">
-
+      <app-search-box></app-search-box>
       <div class="contracts-actions">
         <app-button text="Filter" type="secondary" icon="filter"></app-button>
         <app-button text="New hire" icon="plus"></app-button>
@@ -19,7 +19,9 @@
         <input appInput placeholder="Contact Type">
         <app-icon iconClass="right-icon" icon="arrow-down"></app-icon>
       </div>
-      <input class="column-3" appInput placeholder="Contractor Name">
+      <div class="column-3">
+        <input appInput placeholder="Contractor Name">
+      </div>
       <div class="input-icon-wrapper just-right-icon column-2">
         <input appInput placeholder="Status">
         <app-icon iconClass="right-icon" icon="arrow-down"></app-icon>

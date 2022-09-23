@@ -20,6 +20,7 @@ export class InputDirective implements OnInit{
       color: #7a7a7a;
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
       height: 40px;
+      width: 100%;
     `;
 
     this.element.nativeElement.setAttribute('style', css);

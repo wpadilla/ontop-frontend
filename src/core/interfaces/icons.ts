@@ -9,4 +9,5 @@ export type IAvailableIcons = 'arrow-down'| 'calendar'|
 'plus'|
 'sign'|
 'menu'|
+'search'|
 'trash';
