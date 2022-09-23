@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ContentChild, Input, OnInit, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'app-table',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
+  @Input() columns: string[] = [];
+  @Input() data: any[] = [];
+  @ContentChild('listItem') listItem?: TemplateRef<any>;
 
   constructor() { }
 

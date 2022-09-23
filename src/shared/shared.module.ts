@@ -22,7 +22,8 @@ import { TableComponent } from './components/table/table.component';
     IconComponent,
     InputSearchDirective,
     InputDirective,
-    ButtonComponent
+    ButtonComponent,
+    TableComponent
   ]
 })
 export class SharedModule { }
