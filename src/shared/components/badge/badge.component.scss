@@ -1,0 +1,35 @@
+@import "src/shared/styles/colors";
+
+.badge {
+  padding: 5px 10px;
+  width: 162px;
+  border-radius: 20px;
+  font-size: 0.625rem;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 0.3125rem;
+    height: 0.3125rem;
+    border-radius: 0.625rem;
+    margin-right: 0.4375rem;
+  }
+
+
+  &.success {
+    color: $green;
+    background-color: $light-green;
+    &::before {
+      background-color: $green;
+    }
+  }
+
+  &.pending {
+    color: $orange;
+    background-color: $light-orange;
+    &::before {
+      background-color: $orange;
+    }
+  }
+}

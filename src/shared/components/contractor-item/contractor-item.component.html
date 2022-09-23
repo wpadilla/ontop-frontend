@@ -1,0 +1,14 @@
+<div class="contractor-item">
+  <div class="contractor-item-profile">
+    <img class="contractor-item-profile-image" [src]="contractor.profileImg" alt=""/>
+    <span>{{contractor.name}}</span>
+  </div>
+  <span>{{contractor.type}}</span>
+  <span>{{contractor.startDate | date}}</span>
+  <span>{{contractor.amount | currency}}</span>
+  <app-badge
+    [mode]="contractor.status === 'Active' ? 'success' : 'pending'"
+    [text]="contractor.status">
+  </app-badge>
+  <app-icon icon="options"></app-icon>
+</div>

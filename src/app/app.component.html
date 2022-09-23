@@ -28,17 +28,7 @@
 
     <app-table [data]="contractors" [columns]="contractsColumns">
       <ng-template #listItem let-item>
-        <div class="contractor-item">
-          <div>
-            <img [src]="item.profileImg" alt="" />
-            <span>{{item.name}}</span>
-          </div>
-          <span>{{item.type}}</span>
-          <span>{{item.startDate | date}}</span>
-          <span>{{item.amount | currency}}</span>
-          <span class="badge {{item.status === 'Active' ? 'success' : 'pending' }}" >{{item.status}}</span>
-          <app-icon icon="options"></app-icon>
-        </div>
+        <app-contractor-item [contractor]="item"></app-contractor-item>
       </ng-template>
     </app-table>
   </div>

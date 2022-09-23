@@ -6,16 +6,17 @@
 
   .table-header {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax( 180px, 1fr));
-    gap: 20px;
-    padding: 24px 0 36px 0;
-    font-size: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(11.25rem, 1fr));
+    gap: 1.25rem;
+    padding: 1.5rem 0 2.25rem 0;
+    font-size: 1rem;
     font-weight: 700;
+    justify-items: center;
   }
 
   .table-body {
     .table-item {
-
+      margin-bottom: 1.5rem;
     }
   }
 }
