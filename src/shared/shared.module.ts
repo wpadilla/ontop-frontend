@@ -4,13 +4,15 @@ import { InputSearchDirective } from './directives/input-search.directive';
 import { ButtonComponent } from './components/button/button.component';
 import { CommonModule } from "@angular/common";
 import { InputDirective } from "./directives/input.directive";
+import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
     IconComponent,
     InputSearchDirective,
     InputDirective,
-    ButtonComponent
+    ButtonComponent,
+    TableComponent
   ],
   imports: [
     CommonModule

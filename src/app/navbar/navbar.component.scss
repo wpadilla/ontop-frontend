@@ -1,0 +1,39 @@
+@import "src/shared/styles/colors";
+
+.navbar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 0 81px 0 41px;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+
+  .navbar-logo {
+    max-width: 9.3125rem;
+    cursor: pointer;
+  }
+  .navbar-options {
+    display: flex;
+    align-items: center;
+    gap: 5.625rem;
+  }
+
+  .navbar-user {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    &::before {
+      content: "";
+      height: 2.8125rem;
+      width: 1px;
+      background-color: $gray;
+      margin-right: 2.5rem;
+    }
+
+    .navbar-user-image {
+      width: 4.0625rem;
+      margin-right: 0.8125rem;
+      cursor: pointer;
+    }
+  }
+}

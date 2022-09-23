@@ -1,0 +1,15 @@
+<div class="navbar-wrapper">
+  <img src="assets/logo.png" class="navbar-logo" alt="">
+  <div class="navbar-options">
+    <app-navbar-option *ngFor="let option of navOptions"
+                       [title]="option.title"
+                       [icon]="option.icon"
+                       (click)="selectedOptionTitle = option.title"
+                       [active]="selectedOptionTitle === option.title">
+    </app-navbar-option>
+  </div>
+  <div class="navbar-user">
+    <img class="navbar-user-image" src="assets/images/user.png" alt="" />
+    <app-icon icon="arrow-down"></app-icon>
+  </div>
+</div>
