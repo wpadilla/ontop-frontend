@@ -1,4 +1,4 @@
-<div class="navbar-wrapper">
+<div class="navbar-wrapper" [@verticalSlide]="{ value: ':enter', params: { initialOpacity: 0, yPosition: '-30px', delay: '.6s'}}">
   <img src="assets/logo.png" class="navbar-logo" alt="">
   <div class="navbar-options">
     <app-navbar-option *ngFor="let option of navOptions"

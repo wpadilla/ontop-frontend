@@ -1,15 +1,16 @@
 <app-navbar></app-navbar>
 <main class="content">
-  <h1 class="title">Contracts for Client</h1>
+  <h1 class="title" @fade>Contracts for Client</h1>
   <div class="contracts-wrapper">
-    <div class="contracts-search-filter-wrapper">
-      <app-search-box></app-search-box>
+    <div class="contracts-search-filter-wrapper" @fade>
+      <app-search-box ></app-search-box>
       <div class="contracts-actions">
-        <app-button text="Filter" type="secondary" icon="filter"></app-button>
+        <app-button text="Filter" type="secondary" icon="filter" ></app-button>
         <app-button text="New hire" icon="plus"></app-button>
       </div>
     </div>
-    <div class="contracts-actions-filters">
+    <div class="contracts-actions-filters"
+         [@verticalSlide]="{ value: ':enter', params: { initialOpacity: 0, yPosition: '-30px', delay: '.3s' }}">
       <div class="input-icon-wrapper column-3">
         <app-icon iconClass="left-icon" icon="calendar"></app-icon>
         <input appInput placeholder="Create on: Jan/10/21 - Jan/28/21" disabled>
@@ -28,7 +29,8 @@
       </div>
     </div>
 
-    <app-table [data]="contractors" [columns]="contractsColumns">
+    <app-table [data]="contractors" [columns]="contractsColumns"
+               [@verticalSlide]="{ value: ':enter', params: { initialOpacity: 0, yPosition: '40px', delay: '.6s'}}">
       <ng-template #listItem let-item>
         <app-contractor-item [contractor]="item"></app-contractor-item>
       </ng-template>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IAvailableIcons } from "../../core/interfaces/icons";
+import { verticalSlideAnimation } from "../../shared/animations/common.animations";
 export interface NavOption {
   title: string;
   icon: IAvailableIcons;
@@ -7,7 +8,10 @@ export interface NavOption {
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
+  animations: [
+    verticalSlideAnimation,
+  ]
 })
 export class NavbarComponent implements OnInit {
 

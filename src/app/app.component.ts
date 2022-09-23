@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { fadeAnimation, verticalSlideAnimation } from "../shared/animations/common.animations";
 
 export interface IContractor {
   profileImg: string;
@@ -12,7 +13,11 @@ export interface IContractor {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [
+    verticalSlideAnimation,
+    fadeAnimation,
+  ]
 })
 export class AppComponent {
   title = 'ontop-frontend';

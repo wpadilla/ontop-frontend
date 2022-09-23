@@ -1,4 +1,6 @@
-<div class="context-menu" *ngIf="open" >
+<div class="context-menu" *ngIf="open"
+     (clickOutside)="onHide.emit()"
+     [@verticalSlide]="{ value: ':enter', params: { initialOpacity: 0, yPosition: '-30px', delay: '.2s' }}">
   <div *ngFor="let option of options" class="context-menu-item">
     <app-icon [icon]="option.icon"></app-icon>
     <span class="context-menu-item-label">{{option.label}}</span>

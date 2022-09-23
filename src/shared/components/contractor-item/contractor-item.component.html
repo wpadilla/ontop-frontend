@@ -3,22 +3,24 @@
     <img class="contractor-item-profile-image" [src]="contractor.profileImg" alt=""/>
     <span>{{contractor.name}}</span>
   </div>
-  <span class="contractor-item-value"  data-label="Type">{{contractor.type}}</span>
-  <span class="contractor-item-value"  data-label="Start date">{{contractor.startDate | date}}</span>
-  <span class="contractor-item-value"  data-label="Amount">{{contractor.amount | currency}} USD</span>
-  <app-badge  data-label="Status"
-    class="contractor-item-value"
-    [mode]="contractor.status === 'Active' ? 'success' : 'pending'"
-    [text]="contractor.status">
+  <span class="contractor-item-value" data-label="Type">{{contractor.type}}</span>
+  <span class="contractor-item-value" data-label="Start date">{{contractor.startDate | date}}</span>
+  <span class="contractor-item-value" data-label="Amount">{{contractor.amount | currency}} USD</span>
+  <app-badge data-label="Status"
+             class="contractor-item-value"
+             [mode]="contractor.status === 'Active' ? 'success' : 'pending'"
+             [text]="contractor.status">
   </app-badge>
-  <div class="actions-wrapper contractor-item-value"  data-label="Actions">
-    <app-icon class="cursor-pointer" (click)="toggleContextMenu()" icon="options"
-    ></app-icon>
-    <app-context-menu
-      (onHide)="toggleContextMenu()"
-      [open]="openContextMenu"
-      [options]="contractorActions">
-    </app-context-menu>
+  <div class="actions-wrapper contractor-item-value" data-label="Actions">
+    <div class="context-menu-wrapper">
+      <app-icon class="cursor-pointer" iconClass="options-icon" (click)="toggleContextMenu($event)" icon="options"
+      ></app-icon>
+      <app-context-menu
+        (onHide)="openContextMenu = false"
+        [open]="openContextMenu"
+        [options]="contractorActions">
+      </app-context-menu>
+    </div>
   </div>
 
 </div>

@@ -3,7 +3,7 @@ import { Component, ContentChild, Input, OnInit, TemplateRef } from '@angular/co
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss']
+  styleUrls: ['./table.component.scss'],
 })
 export class TableComponent implements OnInit {
   @Input() columns: string[] = [];

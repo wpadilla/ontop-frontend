@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IAvailableIcons } from "../../../core/interfaces/icons";
+import { verticalSlideAnimation } from "../../animations/common.animations";
 
 export interface IContextMenuOption {
   icon: IAvailableIcons;
@@ -9,8 +10,12 @@ export interface IContextMenuOption {
 @Component({
   selector: 'app-context-menu',
   templateUrl: './context-menu.component.html',
-  styleUrls: ['./context-menu.component.scss']
+  styleUrls: ['./context-menu.component.scss'],
+  animations: [
+    verticalSlideAnimation
+  ]
 })
+
 export class ContextMenuComponent implements OnInit {
   @Input() options: IContextMenuOption[] = [];
   @Input() open?: boolean;

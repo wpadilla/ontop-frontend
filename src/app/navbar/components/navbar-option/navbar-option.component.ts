@@ -1,9 +1,15 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { IAvailableIcons } from "../../../../core/interfaces/icons";
+import {
+  fadeAnimation,
+} from "../../../../shared/animations/common.animations";
 @Component({
   selector: 'app-navbar-option',
   templateUrl: './navbar-option.component.html',
-  styleUrls: ['./navbar-option.component.scss']
+  styleUrls: ['./navbar-option.component.scss'],
+  animations: [
+    fadeAnimation,
+  ]
 })
 export class NavbarOptionComponent implements OnInit {
   @Input() icon: IAvailableIcons = 'person';
@@ -15,13 +21,5 @@ export class NavbarOptionComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  // ngAfterViewInit() {
-  //   if(this.customIcon?.nativeElement) this.customIcon.nativeElement.data = `assets/icons/${this.icon}.svg`
-  //   setTimeout(() => {
-  //     this.rendered = true;
-  //   },300)
-  // }
-
 
 }
