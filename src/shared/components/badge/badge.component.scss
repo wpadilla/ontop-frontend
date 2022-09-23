@@ -1,6 +1,8 @@
 @import "src/shared/styles/colors";
 :host {
   justify-self: stretch;
+  display: flex;
+  justify-content: end;
 }
 
 .badge {
