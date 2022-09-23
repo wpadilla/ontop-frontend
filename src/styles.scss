@@ -24,6 +24,9 @@ body {
     padding: 10px 30px !important;
     width: 100%;
   }
+  app-icon {
+    display: unset !important;
+  }
 
   object {
     position: absolute !important;

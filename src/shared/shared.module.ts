@@ -8,11 +8,13 @@ import { TableComponent } from './components/table/table.component';
 import { ContractorItemComponent } from './components/contractor-item/contractor-item.component';
 import { BadgeComponent } from './components/badge/badge.component';
 import { ContextMenuComponent } from './components/context-menu/context-menu.component';
+import { ClickOutsideDirective } from "./directives/click-outside.directive";
 
 @NgModule({
   declarations: [
     IconComponent,
     InputSearchDirective,
+    ClickOutsideDirective,
     InputDirective,
     ButtonComponent,
     TableComponent,
@@ -27,6 +29,7 @@ import { ContextMenuComponent } from './components/context-menu/context-menu.com
   exports: [
     IconComponent,
     InputSearchDirective,
+    ClickOutsideDirective,
     InputDirective,
     ButtonComponent,
     TableComponent,

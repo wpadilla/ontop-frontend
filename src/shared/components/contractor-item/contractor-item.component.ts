@@ -35,4 +35,6 @@ export class ContractorItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toggleContextMenu = () => this.openContextMenu = !this.openContextMenu;
+
 }

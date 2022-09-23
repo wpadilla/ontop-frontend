@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IAvailableIcons } from "../../../core/interfaces/icons";
 
 export interface IContextMenuOption {
@@ -14,6 +14,7 @@ export interface IContextMenuOption {
 export class ContextMenuComponent implements OnInit {
   @Input() options: IContextMenuOption[] = [];
   @Input() open?: boolean;
+  @Output() onHide: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() {
   }

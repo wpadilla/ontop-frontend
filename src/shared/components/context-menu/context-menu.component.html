@@ -1,4 +1,4 @@
-<div class="context-menu" *ngIf="open">
+<div class="context-menu" *ngIf="open" >
   <div *ngFor="let option of options" class="context-menu-item">
     <app-icon [icon]="option.icon"></app-icon>
     <span class="context-menu-item-label">{{option.label}}</span>
